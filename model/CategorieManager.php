@@ -1,7 +1,7 @@
 <?php
 
 // Ce fichier sert à communiquer avec la BD et construire les objets pour les retourner au controleur.
-// Ces fonctions sont généralement appelé par le routeur (index.php) ou d'autres contrôleurs.
+// Ces fonctions sont généralement appelé par le routeur (index.php) ou d'autres contrôleursl.
 
 require_once("model/Manager.php");
 require_once("model/Categorie.php");
