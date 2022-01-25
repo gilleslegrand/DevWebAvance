@@ -1,7 +1,12 @@
-<?php $title = 'Produits'?>
+<?php $title = 'Produits';
+$titreH1="Les produits";
+if(isset($categorie))
+{
+    $titreH1 .= " de catégorie " . $categorie;
+}?>
 
 <?php ob_start(); ?>
-<h1>Les produits</h1>
+<h1><?php echo $titreH1 ?></h1>
 
 <?php foreach($produits as $produit) { ?>
     <div>

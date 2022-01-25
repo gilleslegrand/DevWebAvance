@@ -33,4 +33,18 @@ class ProduitManager extends Manager
         return $produit;
     }
 
+    public function getProduitsCategorie($id)
+    {
+        $db = $this->dbConnect();
+        $req = $db->query("SELECT p.*, c.categorie FROM tbl_produit AS p INNER JOIN tbl_categorie AS c ON p.id_categorie = c.id_categorie WHERE p.id_categorie = $id ORDER BY p.id_produit");
+        $produits = array();
+       
+        while($data = $req->fetch()){
+            array_push($produits, new Produit($data));
+        }
+
+        $req->closeCursor();
+        return $produits;
+    }
+
 }

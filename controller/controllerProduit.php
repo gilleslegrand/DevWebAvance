@@ -17,3 +17,15 @@ function produit($idProduit)
 
     require('view/produitView.php');
 }
+
+function ListProduitsCategorie($id)
+{
+    $produitManager = new ProduitManager();
+    $produits=$produitManager->getProduitsCategorie($id);
+    foreach($produits as $row)
+    {
+        $categorie=$row->get_categorie();
+    }
+    echo $categorie;
+    require('view/produitsView.php');
+}

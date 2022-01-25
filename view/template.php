@@ -12,6 +12,7 @@
             <ul>
                 <li><a href="<?= $baseURL;?>index.php">Accueil</a></li>
                 <li><a href="<?= $baseURL;?>produits">Les produits</a></li>
+                <li><a href="<?= $baseURL;?>categories">Les catégories</a></li>
             </ul>
         </nav>
         <?= $content ?>

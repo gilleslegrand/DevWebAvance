@@ -6,7 +6,8 @@
 <?php foreach($categories as $categorie) { ?>
     <div>
         <h3>Catégorie: <?= htmlspecialchars($categorie->get_categorie()) ?> </h3>        
-        <p>Description: <?= htmlspecialchars($categorie->get_description()) ?> </p>        
+        <p>Description: <?= htmlspecialchars($categorie->get_description()) ?> </p>
+        <a href=<?php echo "produitscategorie/" . $categorie->get_id_categorie() ?>>Voir les produits</a>        
         <hr>
     </div>
 <?php } ?>

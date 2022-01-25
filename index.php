@@ -34,6 +34,20 @@ if (isset($_GET['action'])) {
         require('controller/controllerCategorie.php');
         listcategories();
     }
+    elseif($_GET['action'] == 'produitscategorie')
+    {
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+            //Ajoute le controleur de Produit
+            require('controller/controllerProduit.php');
+            //Appel la fonction produit contenu dans le controleur de Produit
+            listProduitsCategorie($_GET['id']);
+        }
+        else 
+        {
+            //Si on n'a pas reçu de paramètre id, mais que la page produit a été appelé
+            echo 'Erreur : aucun identifiant de produit envoyé';
+        }
+    }
 }
 // Si pas de paramètre charge l'accueil
 else {
