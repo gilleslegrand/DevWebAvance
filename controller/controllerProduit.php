@@ -22,10 +22,18 @@ function ListProduitsCategorie($id)
 {
     $produitManager = new ProduitManager();
     $produits=$produitManager->getProduitsCategorie($id);
-    foreach($produits as $row)
+    
+    $noElement="";
+
+    if(count($produits))
     {
-        $categorie=$row->get_categorie();
+        $categorie=$produits[0]->get_categorie();
     }
-    echo $categorie;
+    else
+    {
+        $noElement = "Aucun élément dans cette catégorie";
+    }
+   
+
     require('view/produitsView.php');
 }

@@ -7,7 +7,9 @@ if(isset($categorie))
 
 <?php ob_start(); ?>
 <h1><?php echo $titreH1 ?></h1>
-
+<?php 
+    echo $noElement;
+?>
 <?php foreach($produits as $produit) { ?>
     <div>
         <h3>Produit: <?= htmlspecialchars($produit->get_produit()) ?> </h3>        
