@@ -8,7 +8,7 @@ class Utilisateur {
     private $_prenom;
     private $_courriel; 
     private $_mdp;
-    private $_estActif; 
+    private $_est_actif; 
     private $_role_utilisateur;
     private $_token; 
     private $_type_utilisateur;
@@ -129,9 +129,9 @@ class Utilisateur {
     /**
      * Get the value of _estActif
      */ 
-    public function get_estActif()
+    public function get_est_actif()
     {
-        return $this->_estActif;
+        return $this->_est_actif;
     }
 
     /**
@@ -139,9 +139,9 @@ class Utilisateur {
      *
      * @return  self
      */ 
-    public function set_estActif($_estActif)
+    public function set_est_actif($_est_actif)
     {
-        $this->_estActif = $_estActif;
+        $this->_est_actif = $_est_actif;
 
         return $this;
     }

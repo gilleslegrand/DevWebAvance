@@ -1,13 +1,13 @@
 <?php
 
-require('model/ProduitManager.php');
+require_once('model/ProduitManager.php');
 
 function listProduits()
 {
     $produitManager = new ProduitManager();
     $produits = $produitManager->getProduits();
 
-    require('view/produitsView.php');
+    require_once('view/produitsView.php');
 }
 
 function produit($idProduit)
@@ -15,7 +15,7 @@ function produit($idProduit)
     $produitManager = new ProduitManager();
     $produit = $produitManager->getProduit($idProduit);    
 
-    require('view/produitView.php');
+    require_once('view/produitView.php');
 }
 
 function ListProduitsCategorie($id)
@@ -35,5 +35,5 @@ function ListProduitsCategorie($id)
     }
    
 
-    require('view/produitsView.php');
+    require_once('view/produitsView.php');
 }

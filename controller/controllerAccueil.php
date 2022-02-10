@@ -3,7 +3,7 @@
 //Ce fichier est appelé par le routeur (index.php) et gère le comportement de la page d'accueil.
 
 //Sur l'acceuil, nous avons besoin des produits
-require('model/ProduitManager.php');
+require_once('model/ProduitManager.php');
 
 //Fonction qui affichera tous les produits
 function listProduits()
@@ -16,5 +16,5 @@ function listProduits()
     $produits = $produitManager->getProduits();
 
     //Appel la vue d'accueil
-    require('view/accueilView.php');
+    require_once('view/accueilView.php');
 }

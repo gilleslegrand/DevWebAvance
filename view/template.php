@@ -1,9 +1,4 @@
-<?php //Débogage afficher ce qui est reçu en paramètres
-    if(session_status() === PHP_SESSION_NONE)
-    {
-        session_start();
-    }
-?>
+
 
 <?php $baseURL = "/mvc/"?>
 <!DOCTYPE html>
@@ -20,6 +15,8 @@
         echo "----------------------------<br/>";
         echo "Paramètres reçus:<br/><pre>";
         print_r($_REQUEST);
+        echo "----------------------------<br/>";
+        print_r($_SESSION);
         echo "</pre>----------------------------<br/>";
         
 
@@ -49,6 +46,7 @@
                 <li><a href="<?= $baseURL;?>index.php">Accueil</a></li>
                 <li><a href="<?= $baseURL;?>produits">Les produits</a></li>
                 <li><a href="<?= $baseURL;?>categories">Les catégories</a></li>
+                <li><a href="<?= $baseURL;?>inscription">Inscription</a></li>
             </ul>
         </nav>
         <?= $content ?>
